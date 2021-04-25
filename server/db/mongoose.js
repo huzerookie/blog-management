@@ -8,15 +8,6 @@ mongoose.connect(mongooseURL, {
     useCreateIndex: true, //Creates indexes for faster record access
     useFindAndModify: false, //For avoiding deprication warnings
 });
-
-// const me = new User({
-//   name: "       Tron             ",
-//   email: "ASAS@FERFEF.EREFE",
-//   password: "      someStrong     key11   ",
-// });
-// me.save()
-//   .then((result) => console.log(result))
-//   .catch((error) => console.log(error));
 module.exports = {
     mongoose,
 }
