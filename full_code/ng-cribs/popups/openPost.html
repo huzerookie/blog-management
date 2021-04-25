@@ -1,0 +1,42 @@
+<div ng-if="currentTab===3">
+  <div class="container card open-post-bg">
+    <i
+      ng-click="setTab(1)"
+      class="glyphicon glyphicon-circle-arrow-left fixedContainer backBtn"
+    ></i>
+    <img
+      class="card__img center-img margin-top-2"
+      ng-src="{{currentCrib.coverImage}}"
+      alt=""
+    />
+    <hr />
+    <div>
+      <h2 style="text-align: center">{{currentCrib.title}}</h2>
+      <p class="content-open">{{currentCrib.content}}</p>
+    </div>
+  </div>
+  <!-- <form>
+    <div class="container card open-post-bg">
+      <div class="row">
+        <div class="col-md-8" ng-repeat="element in currentCrib.comments">
+          <span>{{element.user.name}}:{{element.comment}}</span>
+          <hr />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <input type="text" ng-model="newName" id="newName" required />
+        </div>
+        <div class="col-md-7">
+          <input
+            type="textarea"
+            ng-model="newComment"
+            id="newComment"
+            required
+          />
+        </div>
+      </div>
+      <button class="btn btn-primary" ng-click="addComment">Comment</button>
+    </div>
+  </form> -->
+</div>

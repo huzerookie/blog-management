@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ng-cribs</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+    />
+    <link
+      href="https://unpkg.com/filepond/dist/filepond.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body ng-app="ngCribs" ng-controller="cribsController">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid center-text">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Blog Management System</a>
+        </div>
+      </div>
+    </nav>
+
+    <div ng-include src="'popups/priceFilter.html'"></div>
+    <div ng-include src="'popups/openPost.html'"></div>
+    <!-- Real Estate Listings -->
+    <div ng-if="currentTab===1" class="container aligner">
+      <div class="col-sm-4" ng-repeat="crib in cribs">
+        <div ng-click="setCrib(crib)" class="thumbnail cursor card">
+          <img class="card__img" ng-src="{{crib.coverImage}}" alt="" />
+          <div class="caption">
+            <div>
+              <h3>
+                <i class="glyphicon glyphicon-pencil"></i> Title:{{crib.title}}
+              </h3>
+              <h4>
+                <i class="glyphicon glyphicon-globe"></i>
+                Category:{{crib.category}}
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Add New Post-->
+      <div ng-include src="'popups/addPost.html'"></div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js"></script>
+  <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+  <script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+  <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+  <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+  <script src="/js/fileUpload.js"></script>
+  <script src="app.js"></script>
+  <script src="scripts/cribsController.js"></script>
+  <script src="scripts/cribsFactory.js"></script>
+  <script src="scripts/cribsFilter.js"></script>
+</html>

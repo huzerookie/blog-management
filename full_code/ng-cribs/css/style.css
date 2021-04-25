@@ -1,0 +1,122 @@
+body {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    228deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+}
+.price-form {
+  margin-bottom: 10px;
+  padding: 15px;
+  background-color: #5cb85c;
+}
+
+.price-form {
+  margin-bottom: 10px;
+  padding: 15px;
+  background-color: #5cb85c;
+}
+
+.price-form-row {
+  margin-bottom: 10px;
+}
+
+.listing-form-row,
+.listing-button {
+  margin-top: 10px;
+}
+
+.listing-form h3 {
+  color: white;
+}
+
+.card {
+  border-radius: 24px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.card__img {
+  border-radius: 24px;
+  padding: 1rem;
+}
+.cursor {
+  cursor: pointer;
+}
+
+.center-text {
+  display: flex;
+  justify-content: center;
+}
+
+.add-post {
+  font-size: 20rem;
+  color: #6b5d5d26;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7rem;
+}
+
+.width-38 {
+  width: 38rem;
+}
+
+.aligner {
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+}
+
+.margin-top-2 {
+  margin-top: 2rem;
+}
+.open-post-bg {
+  background: #b7d7d8;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.fixedContainer {
+  position: fixed;
+  padding: 2em;
+  left: 3%;
+  top: 2%;
+  transform: translateX(-50%);
+}
+
+.backBtn {
+  cursor: pointer;
+  color: #b9e7cb;
+  font-size: 4rem;
+  padding: 0px;
+}
+
+.center-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+}
+
+.content-open {
+  font-size: 2rem;
+  width: 80%;
+  margin-left: auto;
+  margin-top: 3rem;
+  margin-right: auto;
+}
+
+.comments {
+  clear: both;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.comments .avatar-image-container {
+  float: left;
+  max-height: 36px;
+  overflow: hidden;
+  width: 36px;
+}
